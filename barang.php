@@ -64,8 +64,8 @@
     </div>
     <script>
         function konfirmasi(form) {
-            formData = FormData(form);
-            id - formData("id");
+            formData = new FormData(form);
+            id = formData.get("id");
             return config (`Hapus Barang '${id}'?`);
         }
     </script>
