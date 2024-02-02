@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle, #ffffff, #000000, #72a542, #70acf5, #e1e73f, #ffffff, #000000, #72a542, #70acf5, #e1e73f, #ffffff, #000000, #72a542, #70acf5, #e1e73f, #ffffff, #000000, #72a542, #70acf5, #e1e73f, #ffffff, #000000, #72a542, #70acf5, #e1e73f, #ffffff, #000000, #72a542, #70acf5, #e1e73f, #ffffff, #000000, #72a542, #70acf5, #e1e73f);
+    font-family: 'Arial', sans-serif;
+}
+
+form {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+table {
+    margin: 0 auto;
+}
+
+td {
+    padding: 10px;
+}
+
+input {
+    padding: 8px;
+    width: 200px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="reset"] {
+    background-color: #e74c3c;
+}
+
+button:hover {
+    background-color: #5429b9;
+}
