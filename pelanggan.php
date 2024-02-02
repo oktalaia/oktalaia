@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Barang</title>
+    <title>pelanggan</title>
 </head>
 
 <body>
@@ -12,13 +12,13 @@
     
     require "koneksi.php";
 
-    $sql = "SELECT * FROM barang";
+    $sql = "SELECT * FROM pelanggan";
     $query = mysqli_query($koneksi, $sql);
     ?>
 
     <div>
-        <h1>Data Barang</h1>
-        <form action="new-barang.php" method="GET">
+        <h1>Data Pelanggan</h1>
+        <form action="new-pelanggan.php" method="GET">
             <button type="submit">Tambah</button>
         </form>
         <table border="1">
@@ -35,25 +35,25 @@
             </tr>
 
             <?php $i = 1; ?>
-            <?php while ($barang = mysqli_fetch_array($query)) : ?>
+            <?php while ($pelanggan = mysqli_fetch_array($query)) : ?>
                 <tr>
                     <td><?= $i ?></td>
-                    <td><?= $barang["nama"] ?></td>
-                    <td><?= $barang["kategori"] ?></td>
-                    <td><?= $barang["stok"] ?></td>
-                    <td><?= $barang["harga_beli"] ?></td>
-                    <td><?= $barang["harga_jual"] ?></td>
-                    <td><?= $barang["created_at"] ?></td>
-                    <td><?= $barang["updated_at"] ?></td>
+                    <td><?= $pelanggan["nama"] ?></td>
+                    <td><?= $pelanggan["kategori"] ?></td>
+                    <td><?= $pelanggan["stok"] ?></td>
+                    <td><?= $pelanggan["harga_beli"] ?></td>
+                    <td><?= $pelanggan["harga_jual"] ?></td>
+                    <td><?= $pelanggan["created_at"] ?></td>
+                    <td><?= $pelanggan["updated_at"] ?></td>
                     <td>
-                        <form action="read-barang.php" method="GET">
-                            <input type="hidden" name="id" value='<?= $barang["id"] ?>'>
+                        <form action="read-pelanggan.php" method="GET">
+                            <input type="hidden" name="id" value='<?= $pelanggan["id"] ?>'>
                             <button type="submit">Lihat</button>
                         </form>
                     </td>
                     <td>
-                       <form action="delete-barang.php" method="POST" onsubmit="return konfirmasi(this)">
-                            <input type="hidden" name="id" value='<?= $barang["id"] ?>'>
+                       <form action="delete-pelanggan.php" method="POST" onsubmit="return konfirmasi(this)">
+                            <input type="hidden" name="id" value='<?= $pelanggan["id"] ?>'>
                             <button type="submit">Delete</button>
                         </form>
                     </td>
@@ -66,7 +66,7 @@
         function konfirmasi(form) {
             formData = new FormData(form);
             id = formData.get("id");
-            return config (`Hapus Barang '${id}'?`);
+            return config (`Hapus pelanggan '${id}'?`);
         }
     </script>
 </body>
