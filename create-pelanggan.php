@@ -3,16 +3,14 @@
 require "koneksi.php";
 
 $nama = $_POST["nama"];
-$kategori = $_POST["kategori"];
-$stok = $_POST["stok"];
-$harga_beli = $_POST["harga_beli"];
-$harga_jual = $_POST["harga_jual"];
+$alamat = $_POST["alamat"];
+$no_telepon = $_POST["no_telepon"];
 
-$sql = "INSERT INTO barang (nama, kategori, stok, harga_jual, harga_beli) VALUES ('$nama', '$kategori', '$stok', '$harga_jual', '$harga_beli')";
+$sql = "INSERT INTO pelanggan (nama, alamat, no_telepon) VALUES ('$nama', '$alamat', '$no_telepon')";
 mysqli_query($koneksi, $sql);
 
 if (mysqli_error($koneksi)) {
     echo mysqli_error($koneksi);
 } else {
-    header("location: barang.php");
+    header("location: pelanggan.php");
 }

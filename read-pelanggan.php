@@ -13,7 +13,7 @@
 
     $id = $_GET["id"];
 
-    $sql = "SELECT * FROM barang WHERE id = '$id'";
+    $sql = "SELECT * FROM pelanggan WHERE id = '$id'";
     $query = mysqli_query($koneksi, $sql);
 
     $pelanggan = mysqli_fetch_array($query);
@@ -31,25 +31,12 @@
                     <td><input type="text" name="nama" value="<?= $pelanggan["nama"] ?>"></td>
                 </tr>
                 <tr>
-                    <td>Kategori</td>
-                    <td>
-                        <select name="kategori">
-                            <option value="makanan" <?= $pelanggan["kategori"] == "makanan" ? "selected" : ""?>>makanan</option>
-                            <option value="minuman" <?= $pelanggan["kategori"] == "minuman" ? "selected" : ""?>>minuman</option>
-                        </select>
-                    </td>
+                    <td>Alamat</td>
+                    <td><input type="text" name="alamat" value="<?= $pelanggan["alamat"] ?>"></td>
                 </tr>
                 <tr>
-                    <td>Stok</td>
-                    <td><input type="number" name="stok" value="<?= $pelanggan["stok"] ?>"></td>
-                </tr>
-                <tr>
-                    <td>Harga Beli</td>
-                    <td><input type="number" name="harga_beli" value="<?= $pelanggan["harga_beli"] ?>"></td>
-                </tr>
-                <tr>
-                    <td>Harga Jual</td>
-                    <td><input type="number" name="harga_jual" value="<?= $pelanggan["harga_jual"] ?>"></td>
+                    <td>Nomoer Telepon</td>
+                    <td><input type="text" name="no_telepon" value="<?= $pelanggan["no_telepon"] ?>"></td>
                 </tr>
                 <tr>
                     <td colspan="2">

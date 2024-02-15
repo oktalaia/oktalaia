@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>New Barang</title>
+    <title>New Pelanggan</title>
 </head>
 
 <body>
@@ -15,32 +15,20 @@
     ?>
 
     <div>
-        <form action="create-barang.php" method="POST">
-            <h1>Tambah Barang</h1>
+        <form action="create-pelanggan.php" method="POST">
+            <h1>Tambah Pelanggan</h1>
             <table>
                 <tr>
                     <td>Nama</td>
                     <td><input type="text" name="nama"></td>
                 </tr>
                 <tr>
-                    <td>Kategori</td>
-                    <td>
-                        <select name="kategori">
-                            <option value="makanan">makanan</option>
-                        </select>
-                    </td>
+                    <td>Alamat</td>
+                    <td><input type="text" name="alamat"></td>
                 </tr>
                 <tr>
-                    <td>Stok</td>
-                    <td><input type="number" min="0" name="stok"></td>
-                </tr>
-                <tr>
-                    <td>Harga Beli</td>
-                    <td><input type="number" min="0" name="harga_beli"></td>
-                </tr>
-                <tr>
-                    <td>Harga jual</td>
-                    <td><input type="number" min="0" name="harga_jual"></td>
+                    <td>Nomor Telepon</td>
+                    <td><input type="text" name="no_telepon"></td>
                 </tr>
                 <tr>
                     <td colspan="2">

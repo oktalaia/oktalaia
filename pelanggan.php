@@ -25,10 +25,8 @@
             <tr>
                 <th>No.</th>
                 <th>Nama</th>
-                <th>Kategori</th>
-                <th>Stok</th>
-                <th>Harga beli</th>
-                <th>Harga jual</th>
+                <th>Alamat</th>
+                <th>Nomor Telepon</th>
                 <th>Dibuat pada</th>
                 <th>Diubah pada</th>
                 <th colspan="2">Aksi</th>
@@ -39,10 +37,8 @@
                 <tr>
                     <td><?= $i ?></td>
                     <td><?= $pelanggan["nama"] ?></td>
-                    <td><?= $pelanggan["kategori"] ?></td>
-                    <td><?= $pelanggan["stok"] ?></td>
-                    <td><?= $pelanggan["harga_beli"] ?></td>
-                    <td><?= $pelanggan["harga_jual"] ?></td>
+                    <td><?= $pelanggan["alamat"] ?></td>
+                    <td><?= $pelanggan["no_telepon"] ?></td>
                     <td><?= $pelanggan["created_at"] ?></td>
                     <td><?= $pelanggan["updated_at"] ?></td>
                     <td>
