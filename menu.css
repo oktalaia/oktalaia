@@ -1,0 +1,63 @@
+/* Navbar */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    padding: 10px; /* Aturan padding untuk memberikan ruang di sekitar navbar */
+}
+
+/* Menu */
+.menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu-item {
+    margin-right: 20px;
+}
+
+.menu-item a {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 10px 15px; /* Aturan padding untuk tombol di menu */
+    text-decoration: none;
+}
+
+.menu-item a:hover {
+    background-color: #da5c5c;
+}
+
+/* Submenu */
+.submenu {
+    display: none;
+    background-color: #333;
+    z-index: 1;
+    position: absolute;
+    padding: 10px; /* Aturan padding untuk submenu */
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu-item {
+    float: none;
+    margin-right: 0px;
+    border-bottom: 1px solid #b01d1d;
+}
+
+.submenu-item:last-child {
+    border-bottom: none;
+}
+
+.submenu-item a {
+    padding: 8px 15px; /* Aturan padding untuk tautan di submenu */
+    display: block;
+    text-align: left;
+}
+
+.submenu-item a:hover {
+    background-color: #111;
+}

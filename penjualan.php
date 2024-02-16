@@ -3,6 +3,65 @@
 
 <head>
     <title>Penjualan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        #container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+            color: #333;
+        }
+
+        tr:hover {
+            background-color: #f9f9f9;
+        }
+
+        button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 
 <body>
@@ -16,8 +75,8 @@
     $query = mysqli_query($koneksi, $sql);
     ?>
 
-    <div>
-        <h1>Data Penjualan</h1>
+    <div id="container">
+    <h1>Data Penjualan</h1>
         <form action="new-penjualan.php" method="GET">
             <button type="submit">Tambah</button>
         </form>
@@ -31,7 +90,6 @@
                 <th>Waktu</th>
                 <th colspan="2">Aksi</th>
             </tr>
-
             <?php $i = 1; ?>
             <?php while ($penjualan = mysqli_fetch_array($query)) : ?>
                 <tr>

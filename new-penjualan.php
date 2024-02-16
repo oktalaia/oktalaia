@@ -37,6 +37,20 @@
                             <?php endwhile ?>
                         </select>
                     </td>
+                    <td>Pelanggan</td>
+                    <td>
+                        <select name="id_pelanggan">
+                            <?php 
+                            $sql = "SELECT * FROM pelanggan";
+                            $query = mysqli_query($koneksi, $sql);
+                            ?>
+                            <?php while ($pelanggan = mysqli_fetch_array($query)) : ?>
+                                <option value='<?= $pelanggan["id"] ?>'>
+                                    <?= $pelanggan["nama"] ?>
+                                </option>
+                            <?php endwhile ?>
+                        </select>
+                    </td>
                 </tr>
                 <tr>
                     <td>Jumlah</td>
@@ -53,4 +67,4 @@
     </div>
 </body>
 
-</html>
+</html

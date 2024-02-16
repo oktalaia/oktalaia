@@ -4,6 +4,7 @@ require "koneksi.php";
 
 session_start();
 
+$id_pelanggan = $_POST["id_pelanggan"];
 $id_barang = $_POST["id_barang"];
 $jumlah = $_POST["jumlah"];
 
@@ -19,9 +20,9 @@ if ($jumlah > $barang["stok"]) {
 $total_harga = $jumlah * $barang["harga_jual"];
 
 $id_staff = $_SESSION["id"];
-
-$sql = "INSERT INTO penjualan (id_barang, jumlah, total_harga, id_staff) VALUES ('$id_barang', '$jumlah', '$total_harga', '$id_staff')";
+$sql = "INSERT INTO penjualan (id_pelanggan, id_barang, jumlah, total_harga, id_staff) VALUES ('$id_pelanggan','$id_barang', '$jumlah', '$total_harga', '$id_staff')";
 mysqli_query($koneksi, $sql);
+
 
 $sql = "UPDATE barang SET stok = stok - $jumlah WHERE id = '$id_barang'";
 mysqli_query($koneksi, $sql);

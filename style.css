@@ -1,10 +1,11 @@
+
 body {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
     margin: 0;
-    background: radial-gradient(circle, #ffffff, #000000, #72a542, #70acf5, #e1e73f, #ffffff, #000000, #72a542, #70acf5, #e1e73f, #ffffff, #000000, #72a542, #70acf5, #e1e73f, #ffffff, #000000, #72a542, #70acf5, #e1e73f, #ffffff, #000000, #72a542, #70acf5, #e1e73f, #ffffff, #000000, #72a542, #70acf5, #e1e73f, #ffffff, #000000, #72a542, #70acf5, #e1e73f);
+    background:black;
     font-family: 'Arial', sans-serif;
 }
 
