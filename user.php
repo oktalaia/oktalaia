@@ -34,7 +34,7 @@
         th,
         td {
             padding: 10px;
-            text-align: left;
+            text-align: center;
             border-bottom: 1px solid #ddd;
         }
 
@@ -89,13 +89,13 @@
         <form action="new-user.php" method="GET">
             <button type="submit">Tambah</button>
         </form>
-        <table>
+        <table border="1">
             <tr>
                 <th>No.</th>
                 <th>Username</th>
                 <th>Level</th>
                 <th>Dibuat Pada</th>
-                <th>Dibuah Pada</th>
+                <th>Diubah Pada</th>
                 <th colspan="2">Aksi</th>
             </tr>
 
@@ -114,13 +114,13 @@
                         </form>
                     </td>
                     <td>
-                    <form action="delete-user.php" method="POST" onsubmit="return konfirmasi(this)">
+                        <form action="delete-user.php" method="POST" onsubmit="return konfirmasi(this)">
                             <input type="hidden" name="id" value='<?= $user["id"] ?>'>
                             <button type="submit">Delete</button>
                         </form>
                     </td>
                 </tr>
-                <? $i++; ?>
+                <?php $i++; ?>
             <?php endwhile ?>
         </table>
     </div>

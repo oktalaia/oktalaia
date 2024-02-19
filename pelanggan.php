@@ -34,7 +34,7 @@
         th,
         td {
             padding: 10px;
-            text-align: left;
+            text-align: center;
             border-bottom: 1px solid #ddd;
         }
 
@@ -80,7 +80,7 @@
         <form action="new-pelanggan.php" method="GET">
             <button type="submit">Tambah</button>
         </form>
-        <table>
+        <table border="1">
             <tr>
                 <th>No.</th>
                 <th>Nama</th>

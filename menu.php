@@ -17,7 +17,7 @@
 <body>
 
 <nav class="navbar">
-    <ul class="menu container">
+    <ul class="menu">
         <li class="menu-item"><a href="home.php">HOME</a></li>
         <li class="menu-item dropdown">
             <a href="#">MASTER <i class="fas fa-caret-down"></i></a>
@@ -39,15 +39,18 @@
             </ul>
         </li>
         <li class="menu-item dropdown" style="float:right">
-            <a href="#"><i class="fas fa-user"></i><?= $_SESSION["username"] ?><i class="fas fa-caret-down"></i></a>
+            <a href="#"><i class="fas fa-user"></i><?= ucwords($_SESSION["username"]) ?><i class="fas fa-caret-down"></i></a>
             <ul class="submenu">
                 <li class="submenu-item"><a href="profil.php">Profil</a></li>
                 <li class="submenu-item"><a href="logout.php">Log out</a></li>
             </ul>
         </li>
-        <li class="menu-item" style="text-decoration:aqua;">Selamat Datang, <?= $_SESSION["username"] ?>!</li>
+        <li class="menu-item1">Selamat Datang, <?= strtoupper($_SESSION["username"]) ?>!</li>
     </ul>
 </nav>
+
+
+
 
 </body>
 </html>

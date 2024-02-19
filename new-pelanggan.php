@@ -8,7 +8,7 @@
     <?php include "menu.php"; ?>
 
     <?php
-    if ($_SESSION["level"] != "admin" && $_SESSION["level"] != "logistik") {
+    if ($_SESSION["level"] != "admin") {
         echo "Anda tidak dapat mengakses halaman ini";
         exit;
     }

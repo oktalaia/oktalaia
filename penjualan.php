@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Penjualan</title>
+<title>Penjualan</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,7 +12,7 @@
         }
 
         #container {
-            max-width: 1200px;
+            max-width: 90%;
             margin: 20px auto;
             padding: 20px;
             background-color: #fff;
@@ -29,12 +29,13 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
+            text-align: center;
         }
 
         th,
         td {
-            padding: 10px;
-            text-align: left;
+            padding: 8px;
+            text-align: center;
             border-bottom: 1px solid #ddd;
         }
 
@@ -48,8 +49,15 @@
             background-color: #f9f9f9;
         }
 
-        button {
-            padding: 8px 15px;
+        .action-buttons {
+            float: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .action-buttons button {
+            padding: 6px 10px; 
+            margin: 5px;
             background-color: #4CAF50;
             color: white;
             border: none;
@@ -58,8 +66,32 @@
             transition: background-color 0.3s;
         }
 
-        button:hover {
+        .action-buttons button:hover {
             background-color: #45a049;
+        }
+
+        @media screen and (max-width: 768px) {
+            #container {
+                padding: 10px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            th,
+            td {
+                padding: 6px;
+            }
+
+            .action-buttons button {
+                padding: 4px 8px;
+                margin: 3px;
+            }
         }
     </style>
 </head>
@@ -68,17 +100,17 @@
     <?php include "menu.php"; ?>
 
     <?php
-
     require "koneksi.php";
-
     $sql = "SELECT penjualan.id, barang.nama as nama_barang, penjualan.jumlah, penjualan.total_harga, user.username, penjualan.created_at FROM barang JOIN penjualan on barang.id = penjualan.id_barang JOIN user ON user.id = penjualan.id_staff ORDER BY penjualan.created_at DESC";
     $query = mysqli_query($koneksi, $sql);
     ?>
 
     <div id="container">
-    <h1>Data Penjualan</h1>
+        <h1>Data Penjualan</h1>
         <form action="new-penjualan.php" method="GET">
-            <button type="submit">Tambah</button>
+            <div class="action-buttons">
+                <button type="submit" style="text-align: left;">Tambah</button>
+            </div>
         </form>
         <table border="1">
             <tr>
@@ -99,13 +131,13 @@
                     <td><?= $penjualan["total_harga"] ?></td>
                     <td><?= $penjualan["username"] ?></td>
                     <td><?= $penjualan["created_at"] ?></td>
-                    <td>
+                    <td class="action-buttons">
                         <form action="read-penjualan.php" method="GET">
                             <input type="hidden" name="id" value='<?= $penjualan["id"] ?>'>
                             <button type="submit">Lihat</button>
                         </form>
                     </td>
-                    <td>
+                    <td class="action-buttons">
                         <form action="delete-penjualan.php" method="POST" onsubmit="return konfirmasi(this)">
                             <input type="hidden" name="id" value='<?= $penjualan["id"] ?>'>
                             <button type="submit">Delete</button>
