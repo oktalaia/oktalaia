@@ -1,3 +1,17 @@
+<?php include "menu.php"; ?>
+
+    <?php
+
+    require "koneksi.php";
+
+    $id = $_SESSION["id"];
+
+    $sql = "SELECT * FROM user WHERE id = '$id'";
+    $query = mysqli_query($koneksi, $sql);
+
+    $user = mysqli_fetch_array($query);
+    ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -6,7 +20,7 @@
     <style>
         body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #111;
     margin: 0;
     padding: 0;
 }
@@ -62,19 +76,7 @@ button:hover {
 </head>
 
 <body>
-    <?php include "menu.php"; ?>
-
-    <?php
-
-    require "koneksi.php";
-
-    $id = $_SESSION["id"];
-
-    $sql = "SELECT * FROM user WHERE id = '$id'";
-    $query = mysqli_query($koneksi, $sql);
-
-    $user = mysqli_fetch_array($query);
-    ?>
+    
 
     <div>
         <form action="update-profil.php" method="POST">

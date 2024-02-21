@@ -1,27 +1,53 @@
+body {
+    height: 100vh;
+    background-image: url('image/istockphoto-1347295405-170667a.webp');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
 /* Navbar */
 .navbar {
     background-color: #333;
     overflow: hidden;
     padding: 10px; /* Aturan padding untuk memberikan ruang di sekitar navbar */
+    font-weight: bold;
 }
 
 /* Menu */
 .menu {
     list-style-type: none;
-    padding: 10px;
-    margin: 10px;
+    padding: 7px;
+    margin: 7px;
     display: flex;
+    justify-content: space-between; /* Mengatur posisi item-menu ke ujung kanan dan kiri */
+    align-items: center; /* Mengatur item-menu secara vertikal di tengah */
+    flex-grow: 1; /* Menggunakan flex-grow agar item-menu menyebar secara merata */
+}
+
+.menu .logo a {
+    display: block;
+    color: white;
+    text-align: left;
+    padding: 10px 15px; /* Aturan padding untuk tombol di menu */
+    text-decoration: none;
+}
+
+.menu .logo a:hover{
+    background-color: #da5c5c;
 }
 
 .menu-item {
-    margin-right: 20px;
+    margin-right: auto; /* Untuk memindahkan elemen ke tengah */
+    text-align: center; /* Untuk mengatur teks di tengah */
 }
 
 .menu-item a {
     display: block;
     color: white;
-    text-align: left;
-    padding: 10px 15px; /* Aturan padding untuk tombol di menu */
+    text-align: center;
+    padding: 5px 10px; /* Mengatur padding */
     text-decoration: none;
 }
 
@@ -55,7 +81,7 @@
 .submenu-item a {
     padding: 8px 15px; /* Aturan padding untuk tautan di submenu */
     display: block;
-    text-align: left;
+    text-align: center;
 }
 
 .submenu-item a:hover {
@@ -63,8 +89,8 @@
 }
 
 .menu-item1 {
-    flex-grow: 1; /* Ini akan memberikan item ini untuk mengambil ruang yang tersisa */
-    text-align: right; /* Ini akan membuat teks berada di kanan */
+    /* Jika ingin mengatur posisi item di kanan, letakkan flex-grow: 1; di sini */
+    text-align: right;
     color: #fff; /* Memberikan warna teks putih */
     margin-right: 20px; /* Menambahkan jarak di antara item lain */
 }
