@@ -9,10 +9,13 @@ body {
 
 /* Navbar */
 .navbar {
-    background-color: #333;
+    background-color: #0c317865;
     overflow: hidden;
-    padding: 10px; /* Aturan padding untuk memberikan ruang di sekitar navbar */
+    padding: 10px;
+    /* Aturan padding untuk memberikan ruang di sekitar navbar */
     font-weight: bold;
+    margin-top: 12px;
+    border-radius: 1rem;
 }
 
 /* Menu */
@@ -21,39 +24,58 @@ body {
     padding: 7px;
     margin: 7px;
     display: flex;
-    justify-content: space-between; /* Mengatur posisi item-menu ke ujung kanan dan kiri */
-    align-items: center; /* Mengatur item-menu secara vertikal di tengah */
-    flex-grow: 1; /* Menggunakan flex-grow agar item-menu menyebar secara merata */
+    justify-content: space-between;
+    /* Mengatur posisi item-menu ke ujung kanan dan kiri */
+    align-items: center;
+    /* Mengatur item-menu secara vertikal di tengah */
+    flex-grow: 1;
+    /* Menggunakan flex-grow agar item-menu menyebar secara merata */
 }
 
 .menu .logo a {
     display: block;
     color: white;
     text-align: left;
-    padding: 10px 15px; /* Aturan padding untuk tombol di menu */
+    padding: 10px 15px;
+    /* Aturan padding untuk tombol di menu */
     text-decoration: none;
+    tab-size: 20px;
 }
 
-.menu .logo a:hover{
-    background-color: #da5c5c;
+.menu .logo a:hover {
+    background: linear-gradient(to right, #ffffff, #3ba1ea);
+    /* Menggunakan efek gradasi yang sama dengan teks */
+    background-clip: text;
+    /* Memastikan efek gradasi hanya diterapkan pada teks */
+    -webkit-text-fill-color: transparent;
 }
 
 .menu-item {
-    margin-right: auto; /* Untuk memindahkan elemen ke tengah */
-    text-align: center; /* Untuk mengatur teks di tengah */
+    margin-right: auto;
+    /* Untuk memindahkan elemen ke tengah */
+    text-align: center;
+    /* Untuk mengatur teks di tengah */
 }
 
 .menu-item a {
     display: block;
-    color: white;
+    color: #ffffff;
     text-align: center;
-    padding: 5px 10px; /* Mengatur padding */
+    padding: 5px 10px;
+    /* Mengatur padding */
     text-decoration: none;
+    font-size: 20px;
 }
 
 .menu-item a:hover {
-    background-color: #da5c5c;
+    background: linear-gradient(to right, #ffffff, #3ba1ea);
+    /* Menggunakan efek gradasi yang sama dengan teks */
+    background-clip: text;
+    /* Memastikan efek gradasi hanya diterapkan pada teks */
+    -webkit-text-fill-color: transparent;
+    /* Membuat warna teks transparan agar efek gradasi terlihat */
 }
+
 
 /* Submenu */
 .submenu {
@@ -61,7 +83,8 @@ body {
     background-color: #333;
     z-index: 1;
     position: absolute;
-    padding: 10px; /* Aturan padding untuk submenu */
+    padding: 10px;
+    /* Aturan padding untuk submenu */
 }
 
 .dropdown:hover .submenu {
@@ -79,7 +102,8 @@ body {
 }
 
 .submenu-item a {
-    padding: 8px 15px; /* Aturan padding untuk tautan di submenu */
+    padding: 8px 15px;
+    /* Aturan padding untuk tautan di submenu */
     display: block;
     text-align: center;
 }
@@ -91,6 +115,19 @@ body {
 .menu-item1 {
     /* Jika ingin mengatur posisi item di kanan, letakkan flex-grow: 1; di sini */
     text-align: right;
-    color: #fff; /* Memberikan warna teks putih */
-    margin-right: 20px; /* Menambahkan jarak di antara item lain */
+    color: #fff;
+    /* Memberikan warna teks putih */
+    margin-right: 20px;
+    /* Menambahkan jarak di antara item lain */
+    font-size: 20px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    margin: 12px;
+    border-radius: 1rem;
 }

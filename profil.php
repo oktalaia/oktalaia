@@ -1,5 +1,73 @@
-<?php include "menu.php"; ?>
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(4caf50, fff, 000, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        table td {
+            padding: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button[type="submit"],
+        button[type="reset"] {
+            padding: 10px 20px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #4caf50;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover,
+        button[type="reset"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<header>
+    <?php include "menu.php"; ?>
+</header>
+
+<body>
     <?php
 
     require "koneksi.php";
@@ -11,79 +79,10 @@
 
     $user = mysqli_fetch_array($query);
     ?>
-
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Profil</title>
-    <style>
-        body {
-    font-family: Arial, sans-serif;
-    background-color: #111;
-    margin: 0;
-    padding: 0;
-}
-
-div {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-    text-align: center;
-    color: #333;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-td {
-    padding: 10px;
-}
-
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    padding: 8px 15px;
-    margin-right: 10px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-    </style>
-</head>
-
-<body>
-    
-
-    <div>
+    <div class="container">
+        <h1>Profil</h1>
         <form action="update-profil.php" method="POST">
-            <h1>Profil</h1>
-
             <input type="hidden" name="id" value="<?= $id ?>">
-
             <table>
                 <tr>
                     <td>Username</td>
@@ -106,6 +105,11 @@ button:hover {
             </table>
         </form>
     </div>
+
 </body>
+
+<footer>
+    <?php include "menu-footer.php" ?>
+</footer>
 
 </html>

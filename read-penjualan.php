@@ -5,9 +5,11 @@
     <title>Read Penjualan</title>
 </head>
 
-<body>
+<header>
     <?php include "menu.php"; ?>
+</header>
 
+<body>
     <?php
 
     require "koneksi.php";
@@ -45,5 +47,9 @@
         </table>
     </div>
 </body>
+
+<footer>
+    <?php include "menu-footer.php" ?>
+</footer>
 
 </html>

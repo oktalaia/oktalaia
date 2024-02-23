@@ -5,9 +5,11 @@
     <title>New Pembelian</title>
 </head>
 
-<body>
+<header>
     <?php include "menu.php"; ?>
+</header>
 
+<body>
     <?php
 
     require "koneksi.php";
@@ -46,5 +48,9 @@
         </form>
     </div>
 </body>
+
+<footer>
+    <?php include "menu-footer.php" ?>
+</footer>
 
 </html>

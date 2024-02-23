@@ -6,10 +6,11 @@
     <title>New User</title>
 </head>
 
+<header>
+    <?php include "menu.php"; ?>
+</header>
 
 <body>
-    <?php include "menu.php"; ?>
-
     <?php 
     if ($_SESSION["level"] != "admin") {
         echo "Anda tidak dapat mengakses halaman ini";
@@ -49,5 +50,9 @@
         </form>
     </div>
 </body>
+
+<footer>
+    <?php include "menu-footer.php" ?>
+</footer>
 
 </html>

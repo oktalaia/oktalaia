@@ -96,9 +96,11 @@
     </style>
 </head>
 
-<body>
+<header>
     <?php include "menu.php"; ?>
+</header>
 
+<body>
     <?php
     require "koneksi.php";
     $sql = "SELECT penjualan.id, barang.nama as nama_barang, penjualan.jumlah, penjualan.total_harga, user.username, penjualan.created_at FROM barang JOIN penjualan on barang.id = penjualan.id_barang JOIN user ON user.id = penjualan.id_staff ORDER BY penjualan.created_at DESC";
@@ -156,5 +158,9 @@
         }
     </script>
 </body>
+
+<footer>
+    <?php include "menu-footer.php" ?>
+</footer>
 
 </html>

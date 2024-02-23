@@ -17,7 +17,8 @@ if (!array_key_exists("username", $_SESSION)) {
     <link rel="stylesheet" href="menu.css">
 </head>
 
-<body>
+<header>
+
 
     <nav class="navbar">
         <div class="center"> <!-- Tambahkan div dengan class "center" -->
@@ -54,7 +55,10 @@ if (!array_key_exists("username", $_SESSION)) {
             </ul>
         </div>
     </nav>
+</header>
 
+<body>
+    
 </body>
 
 </html>

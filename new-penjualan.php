@@ -5,9 +5,11 @@
     <title>New Penjualan</title>
 </head>
 
-<body>
+<header>
     <?php include "menu.php"; ?>
+</header>
 
+<body>
     <?php
     if ($_SESSION["level"] != "admin" && $_SESSION["level"] != "keuangan") {
         echo "Anda tidak dapat mengakses halaman ini";
@@ -66,5 +68,9 @@
         </form>
     </div>
 </body>
+
+<footer>
+    <?php include "menu-footer.php" ?>
+</footer>
 
 </html

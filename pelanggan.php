@@ -64,11 +64,13 @@
     </style>
 </head>
 
-<body>
+<header>
     <?php include "menu.php"; ?>
+</header>
 
+<body>
     <?php
-    
+
     require "koneksi.php";
 
     $sql = "SELECT * FROM pelanggan";
@@ -107,7 +109,7 @@
                         </form>
                     </td>
                     <td>
-                       <form action="delete-pelanggan.php" method="POST" onsubmit="return konfirmasi(this)">
+                        <form action="delete-pelanggan.php" method="POST" onsubmit="return konfirmasi(this)">
                             <input type="hidden" name="id" value='<?= $pelanggan["id"] ?>'>
                             <button type="submit">Delete</button>
                         </form>
@@ -125,5 +127,9 @@
         }
     </script>
 </body>
+
+<footer>
+    <?php include "menu-footer.php" ?>
+</footer>
 
 </html>

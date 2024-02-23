@@ -64,11 +64,13 @@
     </style>
 </head>
 
-<body>
+<header>
     <?php include "menu.php"; ?>
+</header>
 
+<body>
     <?php
-    
+
     require "koneksi.php";
 
     $sql = "SELECT * FROM barang";
@@ -130,5 +132,10 @@
         }
     </script>
 </body>
+
+<footer>
+    <?php include "menu-footer.php" ?>
+</footer>
+
 
 </html>
