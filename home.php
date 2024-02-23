@@ -23,6 +23,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
+            box-shadow: 2px 2px 5px 2px rgba(0, 0, 255, 0.5);
         }
 
         .content {
@@ -78,7 +79,7 @@
         
         <!-- Card -->
         <div class="card">
-            <img src="image/background.jpg"> 
+            <img src=".image/sweet-corn"> 
             <div class="caption">
                 <p>Caption Anda disini</p>
             </div>

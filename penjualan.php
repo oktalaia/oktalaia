@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title>Penjualan</title>
+    <title>Penjualan</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,12 +12,12 @@
         }
 
         #container {
-            max-width: 90%;
-            margin: 20px auto;
+            max-width: 1200px;
+            margin: 12px;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow:  5px 5px 5px rgb(145, 157, 250);
         }
 
         h1 {
@@ -56,7 +56,7 @@
         }
 
         .action-buttons button {
-            padding: 6px 10px; 
+            padding: 6px 10px;
             margin: 5px;
             background-color: #4CAF50;
             color: white;

@@ -13,7 +13,7 @@
 
         #container {
             max-width: 1200px;
-            margin: 20px auto;
+            margin: 12px;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;

@@ -39,7 +39,7 @@ body {
     padding: 10px 15px;
     /* Aturan padding untuk tombol di menu */
     text-decoration: none;
-    tab-size: 20px;
+    font-size: 20px;
 }
 
 .menu .logo a:hover {
@@ -85,6 +85,7 @@ body {
     position: absolute;
     padding: 10px;
     /* Aturan padding untuk submenu */
+    border-radius: 1rem;
 }
 
 .dropdown:hover .submenu {
@@ -105,7 +106,7 @@ body {
     padding: 8px 15px;
     /* Aturan padding untuk tautan di submenu */
     display: block;
-    text-align: center;
+    text-align: left;
 }
 
 .submenu-item a:hover {
