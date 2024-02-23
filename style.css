@@ -1,55 +1,76 @@
-
 body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
     height: 100vh;
     margin: 0;
-    background:black;
-    font-family: 'Arial', sans-serif;
 }
 
-form {
-    text-align: center;
-    background-color: #fff;
+.login-container {
+    background-color: #ffffff;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
 }
 
 h1 {
+    text-align: center;
     margin-bottom: 20px;
-    color: #333;
 }
 
-table {
-    margin: 0 auto;
+.input-container {
+    margin-bottom: 20px;
 }
 
-td {
-    padding: 10px;
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.icon-input {
+    position: relative;
+}
+
+.icon-input input {
+    padding-right: 30px; /* Sesuaikan padding kanan sesuai dengan lebar ikon */
+}
+
+.icon-input i {
+    position: absolute;
+    right: 10px; /* Sesuaikan jarak ikon dari kanan */
+    top: 50%;
+    transform: translateY(-50%);
+    color: #cccccc;
+    transition: color 0.2s ease;
+}
+
+.icon-input i.hidden {
+    color: transparent;
 }
 
 input {
-    padding: 8px;
-    width: 200px;
+    width: 100%;
+    padding: 5px 10px;
     box-sizing: border-box;
-    margin-bottom: 10px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #3498db;
+    background-color: #007bff;
     color: #ffffff;
+    padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-button[type="reset"] {
-    background-color: #e74c3c;
-}
-
 button:hover {
-    background-color: #5429b9;
+    background-color: #0056b3;
 }
