@@ -54,7 +54,7 @@
 
         .card img {
             width: 100%;
-            height: 10rem;
+            height: 15rem;
             display: block;
         }
 
@@ -62,6 +62,11 @@
             padding: 15px;
             text-align: center;
             background-color: #f5f5f5;
+        }
+
+        .card p{
+            color: #000;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -79,9 +84,9 @@
         
         <!-- Card -->
         <div class="card">
-            <img src=".image/sweet-corn"> 
+            <img src="image/sweet-corn.webp"> 
             <div class="caption">
-                <p>Caption Anda disini</p>
+                <p>Es Sweet Sorn</p>
             </div>
         </div>
 
