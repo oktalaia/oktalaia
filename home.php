@@ -54,7 +54,7 @@
 
         .card img {
             width: 100%;
-            height: 15rem;
+            height: 300px;
             display: block;
         }
 
@@ -84,35 +84,35 @@
         
         <!-- Card -->
         <div class="card">
-            <img src="image/sweet-corn.webp"> 
+            <img src="image/sweet-corn.jpg"> 
             <div class="caption">
                 <p>Es Sweet Sorn</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="image/background.jpg"> 
+            <img src="image/mochi-vanilla.png"> 
             <div class="caption">
                 <p>Caption Anda disini</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="image/background.jpg"> 
+            <img src="image/mochi-chocolate.png"> 
             <div class="caption">
                 <p>Caption Anda disini</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="image/background.jpg"> 
+            <img src="image/f-bluberry.jpg"> 
             <div class="caption">
                 <p>Caption Anda disini</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="image/background.jpg"> 
+            <img src="image/F-Leychee.png"> 
             <div class="caption">
                 <p>Caption Anda disini</p>
             </div>
