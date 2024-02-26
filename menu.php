@@ -41,7 +41,6 @@ if (!array_key_exists("username", $_SESSION)) {
                     <a href="#">TRANSAKSI <i class="fas fa-caret-down"></i></a>
                     <ul class="submenu">
                         <li class="submenu-item"><a href="penjualan.php">Penjualan</a></li>
-                        <li class="submenu-item"><a href="pembelian.php">Pembelian</a></li>
                     </ul>
                 </li>
                 <li class="menu-item dropdown" style="margin-left: 10px;">

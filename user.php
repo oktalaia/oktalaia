@@ -12,8 +12,8 @@
         }
 
         #container {
-            max-width: 1200px;
-            margin: 12px;
+            max-width: 100%;
+            margin: 50px;
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
