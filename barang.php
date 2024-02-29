@@ -88,8 +88,7 @@
                 <th>Nama</th>
                 <th>Kategori</th>
                 <th>Stok</th>
-                <th>Harga beli</th>
-                <th>Harga jual</th>
+                <th>Harga</th>
                 <th>Dibuat pada</th>
                 <th>Diubah pada</th>
                 <th colspan="2">Aksi</th>
@@ -102,8 +101,7 @@
                     <td><?= $barang["nama"] ?></td>
                     <td><?= $barang["kategori"] ?></td>
                     <td><?= $barang["stok"] ?></td>
-                    <td><?= $barang["harga_beli"] ?></td>
-                    <td><?= $barang["harga_jual"] ?></td>
+                    <td><?= $barang["harga"] ?></td>
                     <td><?= $barang["created_at"] ?></td>
                     <td><?= $barang["updated_at"] ?></td>
                     <td>

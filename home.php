@@ -11,7 +11,6 @@
             background-color: #f4f4f4;
             margin: 3rem;
             padding: 0;
-            
         }
 
         .container {
@@ -26,23 +25,28 @@
             box-shadow: 2px 2px 5px 2px rgba(0, 0, 255, 0.5);
         }
 
-        .content {
-            grid-column: 1 / -1; /* Memanjangkan konten untuk menghindari gambar sejajar */
-            clear: both; /* Menghapus floating elements */
+        .content{
+            grid-column: 1 / -1;
+            clear: both;
+            background-color: #111;
+            margin: 3rem;
+            border-radius: 8px;
         }
 
         h1 {
             text-align: center;
-            color: #333;
-            margin-top: 0; /* Menghilangkan margin atas yang default */
+            color: #fff;
+            margin-top: 0;
+            /* Menghilangkan margin atas yang default */
         }
 
         p {
             text-align: center;
-            color: #666;
+            color: #fff;
             font-size: 18px;
             margin-top: 20px;
-            margin-bottom: 20px; /* Memberikan jarak bawah */
+            margin-bottom: 20px;
+            /* Memberikan jarak bawah */
         }
 
         .card {
@@ -64,7 +68,7 @@
             background-color: #f5f5f5;
         }
 
-        .card p{
+        .card p {
             color: #000;
             font-weight: bold;
         }
@@ -76,71 +80,70 @@
 </header>
 
 <body>
+
+    <div class="content">
+        <h1>SELAMAT DATANG <?= strtoupper($_SESSION["username"]) ?>!</h1>
+        <p>This is your personalized website where you can manage various aspects of your business.</p>
+    </div>
     <div class="container">
-        <div class="content">
-            <h1>Welcome to Your Website</h1>
-            <p>This is your personalized website where you can manage various aspects of your business.</p>
-        </div>
-        
-        <!-- Card -->
         <div class="card">
-            <img src="image/sweet-corn.jpg"> 
+            <img src="image/sweet-corn.jpg">
             <div class="caption">
                 <p>Es Sweet Sorn</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="image/mochi-vanilla.png"> 
+            <img src="image/mochi-vanilla.png">
             <div class="caption">
                 <p>Caption Anda disini</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="image/mochi-chocolate.png"> 
+            <img src="image/mochi-chocolate.png">
             <div class="caption">
                 <p>Caption Anda disini</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="image/f-bluberry.jpg"> 
+            <img src="image/f-bluberry.jpg">
             <div class="caption">
                 <p>Caption Anda disini</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="image/F-Leychee.png"> 
+            <img src="image/F-Leychee.png">
             <div class="caption">
                 <p>Caption Anda disini</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="image/background.jpg"> 
+            <img src="image/background.jpg">
             <div class="caption">
                 <p>Caption Anda disini</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="image/background.jpg"> 
+            <img src="image/background.jpg">
             <div class="caption">
                 <p>Caption Anda disini</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="image/background.jpg"> 
+            <img src="image/background.jpg">
             <div class="caption">
                 <p>Caption Anda disini</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="image/background.jpg"> 
+            <img src="image/background.jpg">
             <div class="caption">
                 <p>Caption Anda disini</p>
             </div>

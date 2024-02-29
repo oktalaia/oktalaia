@@ -17,7 +17,7 @@
             padding: 20px;
             background-color: #fff;
             border-radius: 8px;
-            box-shadow:  5px 5px 5px rgb(145, 157, 250);
+            box-shadow: 5px 5px 5px rgb(145, 157, 250);
         }
 
         h1 {
@@ -112,6 +112,11 @@
         <form action="new-penjualan.php" method="GET">
             <div class="action-buttons">
                 <button type="submit" style="text-align: left;">Tambah</button>
+            </div>
+        </form>
+        <form action="cetakpen.php" method="GET">
+            <div class="action-buttons">
+                <button type="submit">Print</button>
             </div>
         </form>
         <table border="1">
