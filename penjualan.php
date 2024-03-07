@@ -49,25 +49,56 @@
             background-color: #f9f9f9;
         }
 
-        .action-buttons {
-            float: flex;
-            justify-content: flex-start;
+        .button-container {
+            display: flex;
+            justify-content: space-between;
             align-items: center;
+            margin-bottom: 10px;
         }
 
         .action-buttons button {
-            padding: 6px 10px;
+            padding: 8px 20px;
             margin: 5px;
-            background-color: #4CAF50;
-            color: white;
+            background-color: #87CEFA;
+            color: black;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s;
+            font-size: 16px;
+            font-weight: bold;
         }
 
         .action-buttons button:hover {
-            background-color: #45a049;
+            background-color: #005f7f;
+        }
+
+        /* Desain khusus untuk tombol tambah */
+        .button-container button.tambah-button {
+            background-color: #87CEFA;
+            border: 2px solid #005f7f;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .button-container button.tambah-button:hover {
+            background-color: #005f7f;
+            border: 2px solid #005f7f;
+        }
+
+        /* Desain khusus untuk tombol print */
+        .button-container button.print-button {
+            background-color: #87CEFA;
+            border: 2px solid #005f7f;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .button-container button.print-button:hover {
+            background-color: #005f7f;
+            border: 2px solid #005f7f;
         }
 
         @media screen and (max-width: 768px) {
@@ -89,8 +120,9 @@
             }
 
             .action-buttons button {
-                padding: 4px 8px;
+                padding: 6px 14px;
                 margin: 3px;
+                font-size: 14px;
             }
         }
     </style>
@@ -109,16 +141,14 @@
 
     <div id="container">
         <h1>Data Penjualan</h1>
-        <form action="new-penjualan.php" method="GET">
-            <div class="action-buttons">
-                <button type="submit" style="text-align: left;">Tambah</button>
-            </div>
-        </form>
-        <form action="cetakpen.php" method="GET">
-            <div class="action-buttons">
-                <button type="submit">Print</button>
-            </div>
-        </form>
+        <div class="button-container">
+            <form action="new-penjualan.php" method="GET">
+                <button type="submit" class="tambah-button">Tambah</button>
+            </form>
+            <form action="cetakpen.php" method="GET">
+                <button type="submit" class="print-button">Print</button>
+            </form>
+        </div>
         <table border="1">
             <tr>
                 <th>No.</th>

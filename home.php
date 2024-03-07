@@ -80,7 +80,6 @@
 </header>
 
 <body>
-
     <div class="content">
         <h1>SELAMAT DATANG <?= strtoupper($_SESSION["username"]) ?>!</h1>
         <p>This is your personalized website where you can manage various aspects of your business.</p>

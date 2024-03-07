@@ -48,18 +48,49 @@
             background-color: #f9f9f9;
         }
 
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
         button {
-            padding: 8px 15px;
+            padding: 8px 20px;
             background-color: #4CAF50;
-            color: white;
+            color: black;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s;
+            font-weight: bold;
         }
 
         button:hover {
             background-color: #45a049;
+        }
+
+        /* Desain khusus untuk tombol tambah */
+        .button-container button.tambah-button {
+            background-color: #87CEFA;
+            border: 2px solid #005f7f;
+        }
+
+        .button-container button.tambah-button:hover {
+            background-color: #005f7f;
+            border: 2px solid #005f7f;
+        }
+
+        /* Desain khusus untuk tombol print */
+        .button-container button.print-button {
+            background-color: #87CEFA;
+            border: 2px solid #005f7f;
+        }
+
+        .button-container button.print-button:hover {
+            background-color: #005f7f;
+            border: 2px solid #005f7f;
         }
     </style>
 </head>
@@ -69,10 +100,10 @@
 </header>
 
 <body>
-    
 
 
-    <?php 
+
+    <?php
     if ($_SESSION["level"] != "admin") {
 
         echo "Anda tidak dapat mengakses halaman ini";
@@ -90,9 +121,14 @@
 
     <div id="container">
         <h1>Data User</h1>
-        <form action="new-user.php" method="GET">
-            <button type="submit">Tambah</button>
-        </form>
+        <div class="button-container">
+            <form action="new-user.php" method="GET">
+                <button type="submit" class="tambah-button">Tambah</button>
+            </form>
+            <form action="cetakuser.php" method="GET">
+                <button type="submit" class="print-button">Print</button>
+            </form>
+        </div>
         <table border="1">
             <tr>
                 <th>No.</th>
