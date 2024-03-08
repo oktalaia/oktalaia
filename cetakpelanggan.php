@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Penjualan</title>
+    <title>Pelanggan</title>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -80,31 +80,34 @@
 
 <body>
     <?php
+
     require "koneksi.php";
-    $sql = "SELECT penjualan.id, barang.nama as nama_barang, penjualan.jumlah, penjualan.total_harga, user.username, penjualan.created_at FROM barang JOIN penjualan on barang.id = penjualan.id_barang JOIN user ON user.id = penjualan.id_staff ORDER BY penjualan.created_at DESC";
+
+    $sql = "SELECT * FROM pelanggan";
     $query = mysqli_query($koneksi, $sql);
     ?>
 
     <div id="container">
-        <h1>LAPORAN DATA PENJUALAN</h1>
+        <h1>LAPORAN DATA PELANGGAN</h1>
         <table border="1">
             <tr>
                 <th>No.</th>
-                <th>Nama Barang</th>
-                <th>Jumlah</th>
-                <th>Total Harga</th>
-                <th>Diinput oleh</th>
-                <th>Waktu</th>
+                <th>Nama</th>
+                <th>Alamat</th>
+                <th>Nomor Telepon</th>
+                <th>Dibuat pada</th>
+                <th>Diubah pada</th>
             </tr>
+
             <?php $i = 1; ?>
-            <?php while ($penjualan = mysqli_fetch_array($query)) : ?>
+            <?php while ($pelanggan = mysqli_fetch_array($query)) : ?>
                 <tr>
                     <td><?= $i ?></td>
-                    <td><?= $penjualan["nama_barang"] ?></td>
-                    <td><?= $penjualan["jumlah"] ?></td>
-                    <td><?= $penjualan["total_harga"] ?></td>
-                    <td><?= $penjualan["username"] ?></td>
-                    <td><?= $penjualan["created_at"] ?></td>
+                    <td><?= $pelanggan["nama"] ?></td>
+                    <td><?= $pelanggan["alamat"] ?></td>
+                    <td><?= $pelanggan["no_telepon"] ?></td>
+                    <td><?= $pelanggan["created_at"] ?></td>
+                    <td><?= $pelanggan["updated_at"] ?></td>
                 </tr>
                 <?php $i++; ?>
             <?php endwhile ?>

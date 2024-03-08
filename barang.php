@@ -48,18 +48,57 @@
             background-color: #f9f9f9;
         }
 
-        button {
-            padding: 8px 15px;
-            background-color: #4CAF50;
-            color: white;
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .lihat {
+            padding: 8px 20px;
+            margin: 5px;
+            background-color: #87CEFA;
+            color: black;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s;
+            font-size: 16px;
+            font-weight: bold;
         }
 
-        button:hover {
-            background-color: #45a049;
+        .lihat:hover {
+            background-color: #005f7f;
+        }
+
+        /* Desain khusus untuk tombol tambah */
+        .button-container button.tambah-button {
+            background-color: #87CEFA;
+            border: 2px solid #005f7f;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .button-container button.tambah-button:hover {
+            background-color: #005f7f;
+            border: 2px solid #005f7f;
+        }
+
+        /* Desain khusus untuk tombol print */
+        .button-container button.print-button {
+            background-color: #87CEFA;
+            border: 2px solid #005f7f;
+            padding: 8px 15px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        .button-container button.print-button:hover {
+            background-color: #005f7f;
+            border: 2px solid #005f7f;
         }
     </style>
 </head>
@@ -79,9 +118,14 @@
 
     <div id="container">
         <h1>Data Barang</h1>
-        <form action="new-barang.php" method="GET">
-            <button type="submit">Tambah</button>
-        </form>
+        <div class="button-container">
+            <form action="new-barang.php" method="GET">
+                <button type="submit" class="tambah-button">Tambah</button>
+            </form>
+            <form action="cetakbarang.php" method="GET">
+                <button type="submit" class="print-button">Print</button>
+            </form>
+        </div>
         <table border="1">
             <tr>
                 <th>No.</th>
@@ -107,13 +151,13 @@
                     <td>
                         <form action="read-barang.php" method="GET">
                             <input type="hidden" name="id" value='<?= $barang["id"] ?>'>
-                            <button type="submit">Lihat</button>
+                            <button type="submit" class="lihat">Lihat</button>
                         </form>
                     </td>
                     <td>
                         <form action="delete-barang.php" method="POST" onsubmit="return konfirmasi(this)">
                             <input type="hidden" name="id" value='<?= $barang["id"] ?>'>
-                            <button type="submit">Delete</button>
+                            <button type="submit" class="lihat">Delete</button>
                         </form>
                     </td>
                 </tr>

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Data User</title>
+    <title>User</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -78,7 +78,7 @@
     ?>
 
     <div id="container">
-        <h1>Data User</h1>
+        <h1>LAPORAN DATA USER</h1>
         <table border="1">
             <tr>
                 <th>No.</th>
