@@ -8,7 +8,7 @@ $id_pelanggan = $_POST["id_pelanggan"];
 $id_barang = $_POST["id_barang"];
 $jumlah = $_POST["jumlah"];
 
-$sql = "SELECT harga_jual, stok FROM barang WHERE id = '$id_barang'";
+$sql = "SELECT harga, stok FROM barang WHERE id = '$id_barang'";
 $query = mysqli_query($koneksi, $sql);
 $barang = mysqli_fetch_array($query);
 
@@ -17,7 +17,7 @@ if ($jumlah > $barang["stok"]) {
     exit;
 }
 
-$total_harga = $jumlah * $barang["harga_jual"];
+$total_harga = $jumlah * $barang["harga"];
 
 $id_staff = $_SESSION["id"];
 $sql = "INSERT INTO penjualan (id_pelanggan, id_barang, jumlah, total_harga, id_staff) VALUES ('$id_pelanggan','$id_barang', '$jumlah', '$total_harga', '$id_staff')";

@@ -132,8 +132,8 @@
                 <th>Nama</th>
                 <th>Alamat</th>
                 <th>Nomor Telepon</th>
-                <th>Dibuat pada</th>
-                <th>Diubah pada</th>
+                <th>Tanggal Buat</th>
+                <th>Tanggal Ubah</th>
                 <th colspan="2">Aksi</th>
             </tr>
 

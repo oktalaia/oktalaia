@@ -133,8 +133,8 @@
                 <th>Kategori</th>
                 <th>Stok</th>
                 <th>Harga</th>
-                <th>Dibuat pada</th>
-                <th>Diubah pada</th>
+                <th>Tanggal Buat</th>
+                <th>Tanggal Ubah</th>
                 <th colspan="2">Aksi</th>
             </tr>
 

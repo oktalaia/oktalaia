@@ -142,8 +142,8 @@
                 <th>No.</th>
                 <th>Username</th>
                 <th>Level</th>
-                <th>Dibuat Pada</th>
-                <th>Diubah Pada</th>
+                <th>Tanggal Buat</th>
+                <th>Tanggal Ubah</th>
                 <th colspan="2">Aksi</th>
             </tr>
 

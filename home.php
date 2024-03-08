@@ -147,6 +147,12 @@
                 <p>Caption Anda disini</p>
             </div>
         </div>
+        <div class="card">
+            <img src="image/background.jpg">
+            <div class="caption">
+                <p>Caption Anda disini</p>
+            </div>
+        </div>
 
         <!-- Tambahkan card lainnya di sini -->
     </div>

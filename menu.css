@@ -130,6 +130,6 @@ footer {
     text-align: center;
     padding: 10px;
     bottom: 0;
-    margin: 12px;
+    overflow: hidden;
     border-radius: 1rem;
 }
