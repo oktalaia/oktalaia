@@ -25,7 +25,7 @@
             box-shadow: 2px 2px 5px 2px rgba(0, 0, 255, 0.5);
         }
 
-        .content{
+        .content {
             grid-column: 1 / -1;
             clear: both;
             background-color: #111;
@@ -75,11 +75,13 @@
     </style>
 </head>
 
-<header>
-    <?php include "menu.php" ?>
-</header>
+
 
 <body>
+    <header>
+        <?php include "menu.php" ?>
+    </header>
+
     <div class="content">
         <h1>SELAMAT DATANG <?= strtoupper($_SESSION["username"]) ?>!</h1>
         <p>This is your personalized website where you can manage various aspects of your business.</p>
@@ -156,10 +158,11 @@
 
         <!-- Tambahkan card lainnya di sini -->
     </div>
-</body>
 
-<footer>
-    <?php include "footer.php" ?>
-</footer>
+    <footer>
+        <?php include "footer.php" ?>
+    </footer>
+
+</body>
 
 </html>

@@ -107,11 +107,11 @@
     </style>
 </head>
 
-<header>
-    <?php include "menu.php"; ?>
-</header>
-
 <body>
+    <header>
+        <?php include "menu.php"; ?>
+    </header>
+
     <?php
 
     require "koneksi.php";
@@ -177,11 +177,11 @@
             return confirm(`Hapus Barang '${id}'?`);
         }
     </script>
-</body>
 
-<footer>
-    <?php include "footer.php" ?>
-</footer>
+    <footer>
+        <?php include "footer.php" ?>
+    </footer>
+</body>
 
 
 </html>

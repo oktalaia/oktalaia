@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Footer</title>
+        <head>
         <!-- Tambahkan Font Awesome CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
         <style>
-                html,
                 body {
                         margin: 0;
                         padding: 0;
@@ -25,6 +20,8 @@
                         box-sizing: border-box;
                         align-items: center;
                         overflow: hidden;
+                        border-radius: 1rem;
+                        font-weight: bold;
                 }
 
                 .footer-block {
@@ -137,7 +134,7 @@
                         <h4 class="footer-block-title" style="text-align: right; margin-right: 18rem; ">HUBUNGI KAMI</h4>
                         <div class="footer-contact-info">
                                 <p class="tel" style="margin-right: 3.7rem;"><i class="fa fa-phone"></i>0812 9765 5443</p>
-                                <p class="email"><i class="fa fa-envelope"></i><a href="mailto:support@website.com">support@website.com</a></p>
+                                <p class="email"><i class="fa fa-envelope"></i><a href="mailto:support@website.com" style="color: #000;">support@website.com</a></p>
                                 <p class="adr has-icon">
                                         <i class="fa fa-map-marker icon"></i>
                                         <span class="adr-group">
