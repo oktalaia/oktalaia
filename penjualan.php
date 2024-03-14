@@ -195,7 +195,7 @@
 </body>
 
 <footer>
-    <?php include "menu-footer.php" ?>
+    <?php include "footer.php" ?>
 </footer>
 
 </html>

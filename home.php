@@ -93,14 +93,7 @@
         </div>
 
         <div class="card">
-            <img src="image/mochi-vanilla.png">
-            <div class="caption">
-                <p>Caption Anda disini</p>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="image/mochi-chocolate.png">
+            <img src="image/Chocolate crispy.jpg">
             <div class="caption">
                 <p>Caption Anda disini</p>
             </div>
@@ -121,34 +114,41 @@
         </div>
 
         <div class="card">
-            <img src="image/background.jpg">
+            <img src="image/Fruit Twister.png">
             <div class="caption">
                 <p>Caption Anda disini</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="image/background.jpg">
+            <img src="image/mochi-vanilla.png">
             <div class="caption">
                 <p>Caption Anda disini</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="image/background.jpg">
+            <img src="image/mochi-chocolate.png">
             <div class="caption">
                 <p>Caption Anda disini</p>
             </div>
         </div>
 
         <div class="card">
-            <img src="image/background.jpg">
+            <img src="image/Sundae Strawberry.jpg">
+            <div class="caption">
+                <p>Caption Anda disini</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="image/Sundae Chocolate.png">
             <div class="caption">
                 <p>Caption Anda disini</p>
             </div>
         </div>
         <div class="card">
-            <img src="image/background.jpg">
+            <img src="image/Cone.png">
             <div class="caption">
                 <p>Caption Anda disini</p>
             </div>
@@ -159,7 +159,7 @@
 </body>
 
 <footer>
-    <?php include "menu-footer.php" ?>
+    <?php include "footer.php" ?>
 </footer>
 
 </html>
