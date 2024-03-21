@@ -5,10 +5,9 @@ require "koneksi.php";
 $nama = $_POST["nama"];
 $kategori = $_POST["kategori"];
 $stok = $_POST["stok"];
-$harga_beli = $_POST["harga_beli"];
-$harga_jual = $_POST["harga_jual"];
+$harga = $_POST["harga"];
 
-$sql = "INSERT INTO barang (nama, kategori, stok, harga_jual, harga_beli) VALUES ('$nama', '$kategori', '$stok', '$harga_jual', '$harga_beli')";
+$sql = "INSERT INTO barang (nama, kategori, stok, harga) VALUES ('$nama', '$kategori', '$stok', '$harga')";
 mysqli_query($koneksi, $sql);
 
 if (mysqli_error($koneksi)) {

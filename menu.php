@@ -15,6 +15,9 @@ if (!array_key_exists("username", $_SESSION)) {
     <title>Navbar</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 
 <header>
@@ -32,7 +35,7 @@ if (!array_key_exists("username", $_SESSION)) {
                             <li class="submenu-item"><a href="user.php">User</a></li>
                         <?php endif ?>
                         <li class="submenu-item"><a href="barang.php">Barang</a></li>
-                        <?php if ($_SESSION["level"] == "admin" || $_SESSION["level"] == "keuangan") : ?>
+                        <?php if ($_SESSION["level"] == "admin") : ?>
                             <li class="submenu-item"><a href="pelanggan.php">Pelanggan</a></li>
                         <?php endif ?>
                     </ul>
@@ -44,7 +47,7 @@ if (!array_key_exists("username", $_SESSION)) {
                     </ul>
                 </li>
                 <li class="menu-item dropdown" style="margin-left: 10px;">
-                    <a href="#"><i class="fas fa-user"></i><?= ucwords($_SESSION["username"]) ?><i class="fas fa-caret-down"></i></a>
+                    <a href="#"><i class="fas fa-user"></i><?= ucwords($_SESSION["username"]) ?></i>-<?= ucwords($_SESSION["level"]) ?><i class="fas fa-caret-down"></i></a>
                     <ul class="submenu">
                         <li class="submenu-item"><a href="profil.php">Profil</a></li>
                         <li class="submenu-item"><a href="logout.php">Log out</a></li>
@@ -57,7 +60,7 @@ if (!array_key_exists("username", $_SESSION)) {
 </header>
 
 <body>
-    
+
 </body>
 
 </html>

@@ -1,9 +1,94 @@
 <!DOCTYPE html>
 <html>
 
-
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>New User</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            background-image: url(image/user\(1\).jpg);
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 5px 2px rgba(0, 0, 255, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td.label,
+        td.label-p {
+            padding: 10px;
+        }
+
+        td.input,
+        td.input-p {
+            padding: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        select {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        button[type="submit"],
+        button[type="reset"] {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #87CEFA;
+            color: black;
+            cursor: pointer;
+            font-weight: bold;
+            border: 2px solid #005f7f;
+        }
+
+        button[type="submit"]:hover,
+        button[type="reset"]:hover {
+            background-color: #005f7f;
+        }
+    </style>
 </head>
 
 <header>
@@ -11,37 +96,37 @@
 </header>
 
 <body>
-    <?php 
+    <?php
     if ($_SESSION["level"] != "admin") {
         echo "Anda tidak dapat mengakses halaman ini";
         exit;
     }
     ?>
 
-    <div>
+    <div class="container">
+        <h1>Tambah User</h1>
         <form action="create-user.php" method="POST">
-            <h1>Tambah User</h1>
             <table>
                 <tr>
-                    <td>Username</td>
-                    <td><input type="text" name="username"></td>
+                    <td class="label">Username</td>
+                    <td class="input"><input type="text" name="username"></td>
                 </tr>
                 <tr>
-                    <td>Password</td>
-                    <td><input type="password" name="password"></td>
+                    <td class="label">Password</td>
+                    <td class="input"><input type="password" name="password"></td>
                 </tr>
                 <tr>
-                    <td>Level</td>
-                    <td>
-                        <select name="level">
-                            <option value="admin">admin</option>
-                            <option value="keuangan">keuangan</option>
-                            <option value="logisik">logistik</option>
+                    <td class="label">Level</td>
+                    <td class="input">
+                        <select name="level" style="font-weight: bold;">
+                            <option value="admin">ADMIN</option>
+                            <option value="keuangan">KEUANGAN</option>
+                            <option value="logistik">LOGISTIK</option>
                         </select>
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2">
+                    <td colspan="2" class="button-container">
                         <button type="submit">SIMPAN</button>
                         <button type="reset">RESET</button>
                     </td>
@@ -52,7 +137,7 @@
 </body>
 
 <footer>
-    <?php include "menu-footer.php" ?>
+    <?php include "footer.php" ?>
 </footer>
 
 </html>

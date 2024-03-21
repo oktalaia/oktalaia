@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Your Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -16,33 +20,33 @@
         .container {
             margin: 50px;
             padding: 20px;
-            background-color: #111;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 30px;
-            box-shadow: 2px 2px 5px 2px rgba(0, 0, 255, 0.5);
         }
 
         .content {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
             grid-column: 1 / -1;
             clear: both;
-            background-color: #111;
+            background-color: transparent;
             margin: 3rem;
             border-radius: 8px;
         }
 
         h1 {
             text-align: center;
-            color: #fff;
+            color: #000;
             margin-top: 0;
             /* Menghilangkan margin atas yang default */
         }
 
         p {
             text-align: center;
-            color: #fff;
+            color: #000;
             font-size: 18px;
             margin-top: 20px;
             margin-bottom: 20px;
@@ -53,7 +57,10 @@
             border: 1px solid #ccc;
             border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 2px 2px 5px 2px rgba(0, 0, 255, 0.5);
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
         }
 
         .card img {
@@ -65,11 +72,11 @@
         .card .caption {
             padding: 15px;
             text-align: center;
-            background-color: #f5f5f5;
+            background-color: #000;
         }
 
         .card p {
-            color: #000;
+            color: #fff;
             font-weight: bold;
         }
     </style>
@@ -83,80 +90,80 @@
     </header>
 
     <div class="content">
-        <h1>SELAMAT DATANG <?= strtoupper($_SESSION["username"]) ?>!</h1>
-        <p>This is your personalized website where you can manage various aspects of your business.</p>
+        <h1>SELAMAT DATANG DI TOKO DOYAN DINGIN!</h1>
+        <p>
+            Nikmati kesegaran dan kelezatan es krim premium kami, terbuat dari bahan-bahan berkualitas terbaik. <br>
+            Dari rasa klasik hingga inovatif, kami menyajikan beragam pilihan untuk memuaskan selera Anda. <br>
+            Kami bangga bisa menyediakan es krim yang tak tertandingi. <br>
+            Dengan kombinasi unik rasa, tekstur yang lembut, dan sentuhan kreatif yang memikat lidah Anda. <br>
+            Mari jelajahi koleksi kami dan temukan es krim impian Anda. <br>
+            Jadikan setiap hari lebih istimewa dengan sejuknya sensasi es krim kami. Selamat menikmati!
+        </p>
     </div>
+
     <div class="container">
-        <div class="card">
+        <div class="card" data-aos="fade-up-right" data-aos-duration="1000">
             <img src="image/sweet-corn.jpg">
             <div class="caption">
-                <p>Es Sweet Sorn</p>
+                <p>Sweet Sorn</p>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up" data-aos-duration="1000">
             <img src="image/Chocolate crispy.jpg">
             <div class="caption">
-                <p>Caption Anda disini</p>
+                <p>Chocolate Crispy</p>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up-left" data-aos-duration="1000">
             <img src="image/f-bluberry.jpg">
             <div class="caption">
-                <p>Caption Anda disini</p>
+                <p>Fruizzy Blueberry</p>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up-right" data-aos-duration="1000">
             <img src="image/F-Leychee.png">
             <div class="caption">
-                <p>Caption Anda disini</p>
+                <p>Fruizzy Leychee</p>
             </div>
         </div>
-
-        <div class="card">
+ 
+        <div class="card" data-aos="fade-up" data-aos-duration="1000">
             <img src="image/Fruit Twister.png">
             <div class="caption">
-                <p>Caption Anda disini</p>
+                <p>Fruit Twister</p>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up-left" data-aos-duration="1000">
             <img src="image/mochi-vanilla.png">
             <div class="caption">
-                <p>Caption Anda disini</p>
+                <p>Mochi Vanilla</p>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up-right" data-aos-duration="1000">
             <img src="image/mochi-chocolate.png">
             <div class="caption">
-                <p>Caption Anda disini</p>
+                <p>Mochi Chocolate</p>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up" data-aos-duration="1000">
             <img src="image/Sundae Strawberry.jpg">
             <div class="caption">
-                <p>Caption Anda disini</p>
+                <p>Sundae Strawberry</p>
             </div>
         </div>
 
-        <div class="card">
+        <div class="card" data-aos="fade-up-left" data-aos-duration="1000">
             <img src="image/Sundae Chocolate.png">
             <div class="caption">
-                <p>Caption Anda disini</p>
+                <p>Sundae Chocolate</p>
             </div>
         </div>
-        <div class="card">
-            <img src="image/Cone.png">
-            <div class="caption">
-                <p>Caption Anda disini</p>
-            </div>
-        </div>
-
-        <!-- Tambahkan card lainnya di sini -->
     </div>
 
     <footer>
@@ -164,5 +171,10 @@
     </footer>
 
 </body>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 </html>

@@ -1,5 +1,15 @@
+<?php
+session_start();
+
+// Check if there's an error message in session
+$error_message = isset($_SESSION["error_message"]) ? $_SESSION["error_message"] : "";
+// Clear the error message from session to prevent it from persisting
+unset($_SESSION["error_message"]);
+?>
+
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Halaman Login</title>
     <link rel="stylesheet" href="style.css">
@@ -13,11 +23,25 @@
                 icon.classList.remove('hidden');
             }
         }
+
+        // Function to hide error message after 2 seconds
+        setTimeout(function() {
+            var errorMessage = document.querySelector('.error-message');
+            if (errorMessage) {
+                errorMessage.style.display = 'none';
+            }
+        }, 1000); // Set timeout for 2 seconds
     </script>
 </head>
+
 <body>
     <div class="login-container">
-        <h1>Selamat Datang!</h1>
+        <?php if (!empty($error_message)) : ?>
+            <div class="error-message"><?php echo $error_message; ?>
+                <i class="fas fa-exclamation-circle error-icon"></i>
+            </div>
+        <?php endif; ?>
+        <h1>SILAHKAN LOGIN!</h1>
         <form action="validasi.php" method="POST">
             <div class="input-container">
                 <label for="username">Username</label>
@@ -40,4 +64,5 @@
         </form>
     </div>
 </body>
+
 </html>

@@ -6,7 +6,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-image: url(image/penjualan.jpg);
+            background-size: cover;
             margin: 0;
             padding: 0;
         }
@@ -143,7 +144,10 @@
         <h1>Data Penjualan</h1>
         <div class="button-container">
             <form action="new-penjualan.php" method="GET">
-                <button type="submit" class="tambah-button">Tambah</button>
+                <?php if ($_SESSION["level"] == "admin") : ?>
+                    <button type="submit" class="tambah-button">Tambah</button>
+                <?php endif ?>
+
             </form>
             <form action="cetakpen.php" method="GET">
                 <button type="submit" class="print-button">Print</button>
@@ -170,14 +174,8 @@
                     <td><?= $penjualan["created_at"] ?></td>
                     <td class="action-buttons">
                         <form action="read-penjualan.php" method="GET">
-                            <input type="hidden" name="id" value='<?= $penjualan["id"] ?>'>
-                            <button type="submit">Lihat</button>
-                        </form>
-                    </td>
-                    <td class="action-buttons">
-                        <form action="delete-penjualan.php" method="POST" onsubmit="return konfirmasi(this)">
-                            <input type="hidden" name="id" value='<?= $penjualan["id"] ?>'>
-                            <button type="submit">Delete</button>
+                                <input type="hidden" name="id" value='<?= $penjualan["id"] ?>'>
+                                <button type="submit">Lihat</button>
                         </form>
                     </td>
                 </tr>
@@ -185,13 +183,6 @@
             <?php endwhile ?>
         </table>
     </div>
-    <script>
-        function konfirmasi(form) {
-            formData = new FormData(form);
-            id = formData.get("id");
-            return confirm(`Hapus penjualan '${id}'?`);
-        }
-    </script>
 </body>
 
 <footer>

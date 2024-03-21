@@ -8,7 +8,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f5f5f5;
+            background-image: url(image/profil.jpg);
+            background-size: cover;
             margin: 0;
             padding: 0;
             font-weight: bold;
@@ -20,7 +21,7 @@
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(4caf50, fff, 000, 0.1);
+            box-shadow: 2px 2px 5px 2px rgba(0, 0, 255, 0.5);
         }
 
         h1 {
@@ -47,18 +48,26 @@
 
         button[type="submit"],
         button[type="reset"] {
+            display: inline-block;
             padding: 10px 20px;
-            margin-top: 10px;
+            margin: 0 10px;
             border: none;
             border-radius: 5px;
-            background-color: #4caf50;
-            color: #fff;
+            background-color: #87CEFA;
+            color: black;
             cursor: pointer;
+            font-weight: bold;
+            text-decoration: none;
+            border: 2px solid #005f7f;
         }
 
         button[type="submit"]:hover,
         button[type="reset"]:hover {
-            background-color: #45a049;
+            background-color: #005f7f;
+        }
+
+        .button-container {
+            text-align: center;
         }
     </style>
 </head>
@@ -89,6 +98,10 @@
                     <td><input readonly type="text" name="username" value="<?= $user["username"] ?>"></td>
                 </tr>
                 <tr>
+                    <td>Level</td>
+                    <td><input readonly type="text" name="level" value="<?= ucwords($_SESSION["level"]) ?>"></td>
+                </tr>
+                <tr>
                     <td>Password baru</td>
                     <td><input required type="password" name="new_password"></td>
                 </tr>
@@ -97,7 +110,7 @@
                     <td><input required type="password" name="confirm_password"></td>
                 </tr>
                 <tr>
-                    <td colspan="2">
+                    <td colspan="2" class="button-container"> <!-- Menggunakan class button-container -->
                         <button type="submit">SIMPAN</button>
                         <button type="reset">RESET</button>
                     </td>

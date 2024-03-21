@@ -6,7 +6,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-image: url(image/user\(1\).jpg);
+            background-size: cover;
             margin: 0;
             padding: 0;
         }
@@ -128,6 +129,15 @@
 
 
     <div id="container">
+        <?php
+        if ($_SESSION["level"] != "admin") {
+            echo "Anda tidak dapat mengakses halaman ini";
+            exit;
+        }
+        require "koneksi.php";
+        $sql = "SELECT * FROM user";
+        $query = mysqli_query($koneksi, $sql);
+        ?>
         <h1>Data User</h1>
         <div class="button-container">
             <form action="new-user.php" method="GET">
@@ -158,7 +168,7 @@
                     <td>
                         <form action="read-user.php" method="GET">
                             <input type="hidden" name="id" value='<?= $user["id"] ?>'>
-                            <button type="submit" class="lihat">Lihat</button>
+                            <button type="submit" class="lihat">Edit</button>
                         </form>
                     </td>
                     <td>
@@ -173,10 +183,30 @@
         </table>
     </div>
     <script>
+        // Function to handle form submission
         function konfirmasi(form) {
             formData = new FormData(form);
             id = formData.get("id");
-            return confirm(`Hapus user '${id}'?`)
+            // Confirm deletion
+            if (confirm(`Hapus user '${id}'?`)) {
+                // AJAX request to delete user
+                fetch("delete-user.php", {
+                        method: "POST",
+                        body: formData
+                    })
+                    .then(response => response.text())
+                    .then(result => {
+                        // Check result
+                        if (result === "success") {
+                            location.reload();
+                        } else {
+                            alert(result);
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+            // Prevent form submission
+            return false; // Tambahkan baris ini untuk mencegah pengiriman form
         }
     </script>
 </body>

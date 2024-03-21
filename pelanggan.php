@@ -6,7 +6,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-image: url(image/tambah\ pelanggan\(1\).jpg);
+            background-size: cover;
             margin: 0;
             padding: 0;
         }
@@ -149,7 +150,7 @@
                     <td>
                         <form action="read-pelanggan.php" method="GET">
                             <input type="hidden" name="id" value='<?= $pelanggan["id"] ?>'>
-                            <button type="submit" class="lihat">Lihat</button>
+                            <button type="submit" class="lihat">Edit</button>
                         </form>
                     </td>
                     <td>

@@ -10,7 +10,8 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-image: url(image/background\ barang\(1\).jpg);
+            background-size: cover;
             margin: 0;
             padding: 0;
         }
@@ -124,7 +125,9 @@
         <h1>Data Barang</h1>
         <div class="button-container">
             <form action="new-barang.php" method="GET">
-                <button type="submit" class="tambah-button">Tambah</button>
+                <?php if ($_SESSION["level"] == "admin" || $_SESSION["level"] == "logistik") : ?>
+                    <button type="submit" class="tambah-button">Tambah</button>
+                <?php endif ?>
             </form>
             <form action="cetakbarang.php" method="GET">
                 <button type="submit" class="print-button">Print</button>
@@ -139,7 +142,9 @@
                 <th>Harga</th>
                 <th>Tanggal Buat</th>
                 <th>Tanggal Ubah</th>
-                <th colspan="2">Aksi</th>
+                <?php if ($_SESSION["level"] == "admin" || $_SESSION["level"] == "logistik") : ?>
+                    <th colspan="2">Aksi</th>
+                <?php endif ?>
             </tr>
 
             <?php $i = 1; ?>
@@ -152,18 +157,20 @@
                     <td><?= $barang["harga"] ?></td>
                     <td><?= $barang["created_at"] ?></td>
                     <td><?= $barang["updated_at"] ?></td>
-                    <td>
-                        <form action="read-barang.php" method="GET">
-                            <input type="hidden" name="id" value='<?= $barang["id"] ?>'>
-                            <button type="submit" class="lihat">Lihat</button>
-                        </form>
-                    </td>
-                    <td>
-                        <form action="delete-barang.php" method="POST" onsubmit="return konfirmasi(this)">
-                            <input type="hidden" name="id" value='<?= $barang["id"] ?>'>
-                            <button type="submit" class="lihat">Delete</button>
-                        </form>
-                    </td>
+                    <?php if ($_SESSION["level"] == "admin" || $_SESSION["level"] == "logistik") : ?>
+                        <td>
+                            <form action="read-barang.php" method="GET">
+                                <input type="hidden" name="id" value='<?= $barang["id"] ?>'>
+                                <button type="submit" class="lihat">Edit</button>
+                            </form>
+                        </td>
+                        <td>
+                            <form action="delete-barang.php" method="POST" onsubmit="return konfirmasi(this)">
+                                <input type="hidden" name="id" value='<?= $barang["id"] ?>'>
+                                <button type="submit" class="lihat">Delete</button>
+                            </form>
+                        </td>
+                    <?php endif ?>
                 </tr>
                 <?php $i++; ?>
             <?php endwhile ?>
